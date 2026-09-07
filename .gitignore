@@ -1,0 +1,19 @@
+# Archivos de Python (temporales)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Entornos virtuales (si creaste uno)
+venv/
+env/
+.env
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Docker
+.dockerignore
+
+# Streamlit (configuraciones locales)
+.streamlit/
