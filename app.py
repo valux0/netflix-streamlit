@@ -68,7 +68,7 @@ with col3:
 st.markdown("---")
 
 # 5. BUSCADOR INTERACTIVO
-st.subheader("🔍 Buscador de Títulos")
+st.subheader("Buscador de Títulos")
 busqueda = st.text_input("Ingresa el nombre de una película o serie:")
 if busqueda:
     resultados = df[df['title'].str.contains(busqueda, case=False, na=False)]
@@ -84,7 +84,7 @@ col_left, col_right = st.columns(2)
 
 with col_left:
     # Gráfica 1: Distribución
-    st.subheader("📊 Distribución de Contenido")
+    st.subheader("Distribución de Contenido")
     type_counts = df['type'].value_counts()
     fig1 = px.pie(
         values=type_counts.values, 
@@ -96,7 +96,7 @@ with col_left:
 
 with col_right:
     # Gráfica 2: Top 10 Géneros
-    st.subheader("🔝 Top 10 Géneros")
+    st.subheader("Top 10 Géneros")
     top_genres = df['listed_in'].value_counts().head(10)
     fig2 = px.bar(
         x=top_genres.values, 
@@ -110,7 +110,7 @@ with col_right:
     st.plotly_chart(fig2, use_container_width=True)
 
 # Gráfica 3: Evolución de contenido agregado (Línea de tiempo)
-st.subheader("📈 Evolución de contenido agregado por año")
+st.subheader("Evolución de contenido agregado por año")
 line_data = df['year_added'].value_counts().sort_index()
 fig3 = px.line(
     x=line_data.index, 
@@ -128,4 +128,4 @@ if st.checkbox("Ver base de datos filtrada"):
 
 # Pie de página
 st.markdown("---")
-st.caption("Dashboard creado para la clase de Inteligencia Artificial - Datos de Netflix")
+st.caption(" Datos de Netflix")
